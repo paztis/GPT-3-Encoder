@@ -1,13 +1,9 @@
 // This file includes code which was modified from https://github.com/openai/gpt-2
-const fs = require('fs')
-const path = require('path');
-
-const encoder = JSON.parse(fs.readFileSync(path.join(__dirname, './encoder.json')));
-const bpe_file = fs.readFileSync(path.join(__dirname, './vocab.bpe'), 'utf-8');
+const encoder = require('./encoder.json');
+const bpe_file = require('./vocab.bpe.json');
 
 const range = (x, y) => {
-  const res = Array.from(Array(y).keys()).slice(x)
-  return res
+  return Array.from(Array(y).keys()).slice(x)
 }
 
 const ord = x => {

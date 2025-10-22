@@ -7,10 +7,12 @@
   "files": [
     "Encoder.js",
     "encoder.json",
-    "vocab.bpe",
+    "vocab.bpe.json",
+    "index.js",
     "index.d.ts"
   ],
   "scripts": {
+    "build": "node ./build/bpe-to-json.js",
     "test": "jest"
   },
   "repository": {
